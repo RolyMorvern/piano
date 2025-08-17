@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./styles.css">
+		<title>Cours de piano | Saint-Étienne</title>
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		   (function(){
+		      emailjs.init({
+		        publicKey: "TSpj9LhKkICEh0Uj8",
+		      });
+		   })();
+		</script>
+		<script type="text/javascript">
+			function sendMail(){
+				let params = {
+					from_email : document.getElementById("formName").value,
+					message : document.getElementById("formMessage").value
+				}
+				emailjs.send("service_3b33yc7", "template_f2xcjl8", params).then(alert("Merci pour votre message"));
+			}
+		</script>
+	</head>
+	<body>
+		<nav>
+			<a class="navElement" href="#quiSuisJe">Qui-suis je ?</a>
+			<a class="navElement" href="#morceaux">Morceaux</a>
+			<a class="navElement" href="#contact">Contactez-moi</a>
+		</nav>
+		<div id="hero"></div>
+		<img src="./images/quiSuisJeSteps.svg" id="quiSuisJeSteps">
+		<main>
+			<div id="quiSuisJe">
+				<h1>Qui suis-je ?</h1>
+				<br>
+				<br>
+				<p id="quiSuisJeParagraph">Salut, je m'appelle <span class="gradientText">Roly</span>. J'ai 15 ans et je pratique le piano depuis maintenant une décennie. Mon parcours musical m'a permis de me produire dans divers événements, notamment des compétitions musicales, des festivals et des concerts. Qui plus est, j'ai eu l'opportunité de partager ma passion musicale auprès des enfants, en jouant du piano et de l'ukulélé dans une garderie. <br><br> Je donnerai des cours de piano à tous les débutants, quel que soit leur âge, à votre domicile.</p>
+				<img src="./images/profileImage.webp" alt="Profile Image" id="quiSuisJeImage">
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div id="morceaux">
+				<h1>Morceaux</h1>
+				<br>
+				<p>Écoutez quelques morceaux interprétés par moi !</p>
+				<br>
+				<div id="videoContainer">
+					<iframe src="https://www.youtube.com/embed/bDbj4_U7Xsk" title="Passacaglia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="videoCard"></iframe>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div id="contact">
+				<h1>Contactez-moi</h1>
+				<p>📍 42000, Saint-Étiene <br><br> ✉️ <a href="mailto:rmorvern@gmail.com">rmorvern@gmail.com</a></p>
+				<form id="contactForm">
+					<input placeholder="Votre email" type="email" name="email" id="formName">
+					<textarea placeholder="Écrivez moi une message..." id="formMessage"></textarea>
+					<input onclick="sendMail()" value="Envoyez" type="submit" name="submit" id="submitForm">
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
