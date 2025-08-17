@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: #3D3D3D;	
+}
+p, .navElement, #formMessage, input {
+	font-family: "Raleway", sans-serif;
+}
+h1, h2, h3 {
+	font-family: "DM Serif Text", serif;
+}
+nav {
+	padding: 25px 0;
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	justify-content: space-evenly;
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	z-index: 15;	
+
+}
+a {
+	color: white;
+	text-decoration: none;
+	transition: 0.5s;
+}
+a:hover {
+	color: lightgrey;
+}
+h1, h2, h3 {
+	font-family: "DM Serif Text", serif;
+	}
+#hero {
+	border: 1px solid black;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("./images/headImage.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+#quiSuisJeSteps {
+	position: absolute;
+	z-index: 10;
+	bottom: -10px;
+	width: 100%;
+}
+main {
+	padding: 50px;
+	color: white;
+}
+#quiSuisJe {
+	position: relative;
+}
+#quiSuisJeParagraph {
+	text-align: justify;
+	width: 50vw;
+}
+#quiSuisJeImage {
+	height: calc(100% - 1em);
+	border-radius: 15px;
+	position: absolute;
+	top: 12.5%;
+	right: 5vw;
+}
+.gradientText {
+	background: -webkit-linear-gradient(skyblue, violet);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+}
+#videoContainer {
+	display: flex;
+	gap: 3vw;
+	flex-wrap: wrap;
+}
+.videoCard {
+	width: 25vw;
+	border-radius: 10px;
+}
+#contactForm {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+#formMessage, input {
+	border-radius: 10px;
+	padding: 10px;
+	border: 0px;
+}
+#formMessage {
+	resize: none;
+	height: 25vh;
+	width: 20vw;
+	margin: 25px 0;
+}
+#submitForm {
+	cursor: pointer;
+}
+@media (max-width: 1125px) {
+	#hero {
+		background-image: url("./images/headImageMedium.png") !important;
+		background-position: left;
+	}
+	#formMessage {
+		width: 40vw;
+	}
+}
+@media (max-width: 1000px) {
+	#quiSuisJeParagraph {
+		width: 100%;
+	}
+	#quiSuisJeImage {
+		padding: 10px 0;
+		width: 35vw !important;
+		position: static !important;
+	}
+	.videoCard {
+		width: 35vw;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 700px) {
+	#hero {
+		background-image: url("./images/headImageSmallMedium.png") !important;
+		background-position: center;
+	}
+	#formMessage {
+		width: 50vw;
+	}
+}
+@media (max-width: 275px) {
+	nav {
+		display: none !important;
+	}
+	#hero {
+		background-image: url("./images/headImageMobile.png") !important;
+	}
+	#formMessage {
+		width: 65vw;
+	}
+}
