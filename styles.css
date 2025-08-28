@@ -131,6 +131,9 @@ main {
 		background-image: url("./images/headImageSmallMedium.png") !important;
 		background-position: center;
 	}
+	#quiSuisJeSteps {
+		display: none;
+	}
 	#formMessage {
 		width: 50vw;
 	}
